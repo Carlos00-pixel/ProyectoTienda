@@ -1,4 +1,4 @@
-﻿/*ESTILO PARA LA PLNATILLA PRINCIPAL (SIN HEADER)*/
+﻿
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -32,14 +32,10 @@
     fill: currentColor;
 }
 
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-}
 
-.nav-scroller .nav {
+
+.sidebar {
+    height: 100vh;
     display: flex;
     flex-wrap: nowrap;
     padding-bottom: 1rem;
@@ -48,4 +44,14 @@
     text-align: center;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+}
+
+/* Clase para ajustar el ancho del sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 1000;
 }
