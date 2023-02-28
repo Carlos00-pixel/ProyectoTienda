@@ -1,5 +1,5 @@
 ﻿
-.bd-placeholder-img {
+/*.bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
@@ -44,14 +44,60 @@
     text-align: center;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-}
+}*/
 
 /* Clase para ajustar el ancho del sidebar */
-.sidebar {
+/*.sidebar {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 300px;
     z-index: 1000;
+}*/
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+        transition: all 0.3s;
+        position: fixed;
+    }
+
+        .sidebar .nav-link {
+            text-align: center;
+        }
+
+        .sidebar.show {
+            left: 0;
+        }
+}
+
+.main {
+    transition: margin-left .3s;
+    padding: 15px;
+}
+
+@media (max-width: 767.98px) {
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        margin-left: 240px;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar {
+        left: 0;
+    }
 }
